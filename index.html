@@ -55,7 +55,7 @@ nav{
 }
 .hero-bg{
   position:absolute;inset:0;z-index:0;
-  background-image:url('https://images.pexels.com/photos/1430677/pexels-photo-1430677.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+  background-image:url('https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
   background-size:cover;background-position:center;
   opacity:0.15;
 }
@@ -244,6 +244,69 @@ footer{background:rgba(0,0,0,.85);border-top:1px solid rgba(201,168,76,.15);padd
   .pd{height:280px}
   .pd-cap{left:22px;right:22px}
 }
+
+/* PARALLAX */
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+}
+.parallax-bg {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  right: 0;
+  bottom: -30%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.parallax-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.3) 55%, rgba(201,168,76,0.12) 100%);
+  z-index: 1;
+}
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 52px;
+}
+.parallax-content h3 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 3.5vw, 42px);
+  font-weight: 700;
+  color: #F8F4EE;
+  margin-bottom: 12px;
+}
+.parallax-content p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #F5D485;
+}
+.parallax-label {
+  position: absolute;
+  bottom: 28px;
+  left: 52px;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: .36em;
+  color: #C9A84C;
+  text-transform: uppercase;
+  z-index: 2;
+}
+@media(max-width:768px) {
+  .parallax-bg { background-attachment: scroll; }
+  .parallax { height: 280px; }
+  .parallax-content { padding: 0 22px; }
+}
+
 </style>
 </head>
 <body>
@@ -297,12 +360,14 @@ footer{background:rgba(0,0,0,.85);border-top:1px solid rgba(201,168,76,.15);padd
 </div>
 
 <!-- HERO PHOTO DIVIDER -->
-<div class="pd" style="background-image:url('https://images.pexels.com/photos/273886/pexels-photo-273886.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');">
-  <div class="pd-cap">
+<div class="parallax">
+  <div class="parallax-bg" style="background-image:url('https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');"></div>
+  <div class="parallax-overlay"></div>
+  <div class="parallax-content">
     <h3>Where Every Deal<br>Sets Sail</h3>
     <p>Professional yacht brokerage with precision execution from start to closing.</p>
   </div>
-  <div class="pd-lbl">Croshire Marine — Yacht Brokerage</div>
+  <div class="parallax-label">Croshire Marine — Yacht Brokerage</div>
 </div>
 
 <!-- SERVICES -->
@@ -376,15 +441,15 @@ footer{background:rgba(0,0,0,.85);border-top:1px solid rgba(201,168,76,.15);padd
 
   <div class="img-grid">
     <div class="img-tile">
-      <img src="https://images.pexels.com/photos/273886/pexels-photo-273886.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Motor yacht">
+      <img src="https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Motor yacht">
       <div class="img-tile-lbl">Motor Yachts</div>
     </div>
     <div class="img-tile">
-      <img src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Sailing yacht">
+      <img src="https://images.pexels.com/photos/1131859/pexels-photo-1131859.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Sailing yacht">
       <div class="img-tile-lbl">Sailing Yachts</div>
     </div>
     <div class="img-tile">
-      <img src="https://images.pexels.com/photos/1430677/pexels-photo-1430677.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Superyacht">
+      <img src="https://images.pexels.com/photos/2248718/pexels-photo-2248718.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Superyacht">
       <div class="img-tile-lbl">Superyachts</div>
     </div>
   </div>
@@ -414,7 +479,7 @@ footer{background:rgba(0,0,0,.85);border-top:1px solid rgba(201,168,76,.15);padd
 
   <div class="about-grid">
     <div class="about-img">
-      <img src="https://images.pexels.com/photos/1430677/pexels-photo-1430677.jpeg?auto=compress&cs=tinysrgb&w=900&q=80" alt="Yacht brokerage">
+      <img src="https://images.pexels.com/photos/2248718/pexels-photo-2248718.jpeg?auto=compress&cs=tinysrgb&w=900&q=80" alt="Yacht brokerage">
     </div>
     <div class="about-text">
       <p class="lead" style="margin-bottom:24px">Croshire Marine was founded on one principle -- that buying or selling a vessel should be simple, transparent, and stress-free.</p>
