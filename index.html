@@ -548,6 +548,13 @@ footer{background:rgba(0,0,0,.85);border-top:1px solid rgba(201,168,76,.15);padd
     <div class="fg"><label class="fl">Price or Budget</label><input class="fii" type="text" name="price_budget" placeholder="e.g. $350,000"></div>
     <div class="fg"><label class="fl">Tell Us More</label><textarea class="fii" name="notes" placeholder="Share any details about the vessel or what you are looking for..."></textarea></div>
     <button type="submit" class="sub">Submit Inquiry</button>
+      <!-- Stripe Badge -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:16px;opacity:0.75;">
+        <div style="background:#635BFF;border-radius:6px;padding:6px 14px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#ffffff;letter-spacing:0.05em;">stripe</span>
+        </div>
+        <span style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:.25em;color:rgba(200,192,176,0.6);text-transform:uppercase;">Payments secured by Stripe</span>
+      </div>
     <div class="fn">Commission-only. No upfront fees to clients.</div>
   </form>
   <div id="success-msg" style="display:none;text-align:center;padding:2rem;color:#c9a84c;font-family:'Cinzel',serif;letter-spacing:0.2em;">
@@ -582,6 +589,7 @@ function handleSubmit(e) {
     body: new URLSearchParams(data).toString()
   }).then(function() {
     form.style.display = 'none';
+    setTimeout(function() { window.location.href = 'https://buy.stripe.com/9B66oGauabY63Ezc6A57W00'; }, 1500);
     document.getElementById('success-msg').style.display = 'block';
   }).catch(function() {
     alert('Submission error. Please call us directly.');
