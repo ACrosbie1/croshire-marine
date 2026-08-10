@@ -479,7 +479,7 @@ footer{display:block;}
     <a href="#services">Services</a>
     <a href="#fleet">Vessels</a>
     <a href="#about">About</a>
-    <a href='https://buy.stripe.com/6oUaEW6dU6DMb71b2w57W02' target='_blank' class='nav-apply'>APPLY NOW</a>
+    <span class='nav-apply' style="opacity:0.55;cursor:default;">COMING SOON</span>
   </div>
 </nav>
 
@@ -883,7 +883,6 @@ function handleSubmit(e) {
     body: new URLSearchParams(data).toString()
   }).then(function() {
     form.style.display = 'none';
-    setTimeout(function() { window.location.href = 'https://buy.stripe.com/6oUaEW6dU6DMb71b2w57W02'; }, 1500);
     document.getElementById('success-msg').style.display = 'block';
   }).catch(function() {
     alert('Submission error. Please call us directly.');
